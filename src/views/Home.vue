@@ -35,7 +35,6 @@ export default class Home extends Vue {}
   align-items: center
   flex-direction: column
   justify-content: center
-  background-color: #37474F
 
 .started
   button

@@ -12,8 +12,9 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: #2c3e50
   font-family: 'Nunito', sans-serif
+  background-color: #37474F
+  color: white
 </style>
 
 <script>
