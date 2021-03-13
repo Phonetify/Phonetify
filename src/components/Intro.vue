@@ -1,22 +1,20 @@
 <template>
   <div class="hello">
-    <h1 :style="style" >{{ msg }}</h1>
+    <h1 :style="style()" >{{ msg }}</h1>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component({
-  computed: {
-    style(): string {
-      return `color: ${this.color}`
-    }
-  }
-})
+@Component
 export default class Intro extends Vue {
   @Prop() private msg!: string;
   @Prop() private color!: string;
+
+  style() {
+    return `color: ${this.color}`
+  }
 }
 </script>
 

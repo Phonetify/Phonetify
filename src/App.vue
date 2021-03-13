@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Nav />
     <router-view/>
   </div>
 </template>
@@ -19,11 +18,20 @@
 
 <script>
 import {Component, Vue} from "vue-property-decorator";
-import Nav from "@/components/Nav";
 
 @Component({
   components: {
-    Nav,
+  },
+
+
+  watch: {
+    $route: {
+      immediate: true,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      handler (to, from) {
+        document.title = to.meta.title || 'Phonetify'
+      }
+    }
   }
 })
 export default class App extends Vue {}
