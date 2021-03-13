@@ -61,6 +61,8 @@ export default class Listen extends Vue {}
   outline: none
   border-radius: 15px
   width: 40vw
-  height: 40vh
+  height: 60vh
   padding: 2em
+
+  font-size: 1.3em
 </style>
