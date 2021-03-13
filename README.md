@@ -1,6 +1,5 @@
-# Phonetify
-
 <div align="center">
+    <h1>Phonetify</h1>
     <img src="assets/sound-waves.png" alt="sound wave">
 </div>
 
