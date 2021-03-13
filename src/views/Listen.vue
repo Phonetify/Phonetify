@@ -1,5 +1,7 @@
 <template>
   <div class="listen">
+    <a href="/" class="back"><button>Back</button></a>
+
     <h1>Hello world</h1>
   </div>
 </template>
@@ -21,4 +23,26 @@ export default class Listen extends Vue {}
 <style lang="sass" scoped>
 .listen
   height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.back
+  position: absolute
+  top: 10px
+  left: 10px
+  button
+    height: 5vh
+    width: 5vw
+    border: none
+
+    border-radius: 15px
+    background-color: #546E7A
+    color: white
+    font-family: 'Nunito', sans-serif
+    font-size: 1.5em
+    font-weight: bold
+    letter-spacing: 2px
+    &:hover
+      cursor: pointer
 </style>
