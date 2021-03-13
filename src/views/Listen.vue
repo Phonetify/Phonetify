@@ -1,8 +1,12 @@
 <template>
   <div class="listen">
-    <a href="/" class="back"><button>Back</button></a>
+    <a href="/" class="back">
+      <button>Back</button>
+    </a>
 
-    <h1>Hello world</h1>
+    <label>
+      <textarea class="paste" v-model="pasteText" placeholder="Paste Text"></textarea>
+    </label>
   </div>
 </template>
 
@@ -16,6 +20,12 @@ import {Component, Vue} from "vue-property-decorator";
       title: 'Phonetify / Listen'
     }
   },
+
+  data() {
+    return {
+      pasteText: ''
+    }
+  }
 })
 export default class Listen extends Vue {}
 </script>
@@ -45,4 +55,12 @@ export default class Listen extends Vue {}
     letter-spacing: 2px
     &:hover
       cursor: pointer
+
+.paste
+  border: none
+  outline: none
+  border-radius: 15px
+  width: 40vw
+  height: 40vh
+  padding: 2em
 </style>
