@@ -1,5 +1,9 @@
 # Phonetify
 
+<div align="center">
+    <img src="assets/sound-waves.png" alt="sound wave">
+</div>
+
 ## Project setup
 ```
 yarn install
