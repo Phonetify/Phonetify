@@ -15,7 +15,12 @@
     </div>
 
     <div class="audio">
-      <Player :link-text="linkText" :paste-text="pasteText" />
+      <Player :link-text="linkText" :paste-text="pasteText" :voice="selected" />
+
+      <label for="voices">Choose a voice</label>
+      <select @change="changeSelected($event)" name="voices" id="voices" >
+        <option v-for="voice in voices" :key="voice" :value="voice">{{voice}}</option>
+      </select>
     </div>
 
   </div>
@@ -40,6 +45,60 @@ import Player from "@/components/Player.vue";
 export default class Listen extends Vue {
   pasteText = ''
   linkText = ''
+  selected = 'Alex'
+
+  changeSelected(event: object) {
+    this.selected = event.target.value
+    console.log(this.selected)
+  }
+
+  voices = [
+    "Alex",
+    "Alice",
+    "Alva",
+    "Amelie",
+    "Carmit",
+    "Damayanti",
+    "Daniel",
+    "Diego",
+    "Fiona",
+    "Fred",
+    "Ioana",
+    "Joana",
+    "Jorge",
+    "Juan",
+    "Kanya",
+    "Karen",
+    "Kyoko",
+    "Laura",
+    "Lekha",
+    "Luca",
+    "Luciana",
+    "Maged",
+    "Mariska",
+    "Meijia",
+    "Melina",
+    "Milena",
+    "Moira",
+    "Monica",
+    "Nora",
+    "Paulina",
+    "Rishi",
+    "Samantha",
+    "Sara",
+    "Satu",
+    "Sinji",
+    "Tessa",
+    "Thomas",
+    "Tingting",
+    "Veena",
+    "Victoria",
+    "Yelda",
+    "Yuna",
+    "Yuri",
+    "Zosia",
+    "Zuzana"
+  ]
 }
 </script>
 
