@@ -13,31 +13,34 @@
         <textarea class="paste" v-model="pasteText" placeholder="Paste Text"></textarea>
       </label>
     </div>
+
+    <div class="audio">
+      <Player :link-text="linkText" :paste-text="pasteText" />
+    </div>
+
   </div>
 </template>
 
 <script lang="ts">
 
 import {Component, Vue} from "vue-property-decorator";
+import Player from "@/components/Player.vue";
 
 @Component({
+  components: {
+    Player
+  },
+
   metaInfo() {
     return {
       title: 'Phonetify / Listen',
     }
-  },
-
-  data() {
-    return {
-      pasteText: '',
-      linkText: '',
-    }
-  },
-
-  methods: {
   }
 })
-export default class Listen extends Vue {}
+export default class Listen extends Vue {
+  pasteText = ''
+  linkText = ''
+}
 </script>
 
 <style lang="sass" scoped>
@@ -101,4 +104,8 @@ export default class Listen extends Vue {}
 
     letter-spacing: 2px
     margin-bottom: 1.5em
+
+.audio
+  display: flex
+  flex-direction: column
 </style>
