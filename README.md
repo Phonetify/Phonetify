@@ -1,7 +1,10 @@
 <div align="center">
     <h1>Phonetify</h1>
+    <h2>Your audio solution to text articles.</h2>
     <img src="assets/sound-waves.png" alt="sound wave">
 </div>
+
+![ss](assets/home_ss.png)
 
 ## Project setup
 ```
