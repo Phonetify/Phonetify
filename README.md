@@ -4,6 +4,8 @@
     <img src="assets/sound-waves.png" alt="sound wave">
 </div>
 
+![ss](assets/home_ss.png)
+
 ## Project setup
 ```
 yarn install

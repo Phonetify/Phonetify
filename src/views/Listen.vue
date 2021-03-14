@@ -6,7 +6,7 @@
 
     <div class="texts">
       <label>
-        <input type="text" class="link" v-model="linkText" placeholder="Enter Link" />
+        <input type="url" class="link" v-model="linkText" placeholder="Enter Link" />
       </label>
 
       <label>
@@ -23,11 +23,8 @@ import {Component, Vue} from "vue-property-decorator";
 @Component({
   metaInfo() {
     return {
-      title: 'Phonetify / Listen'
+      title: 'Phonetify / Listen',
     }
-  },
-
-  methods: {
   },
 
   data() {
@@ -35,6 +32,9 @@ import {Component, Vue} from "vue-property-decorator";
       pasteText: '',
       linkText: '',
     }
+  },
+
+  methods: {
   }
 })
 export default class Listen extends Vue {}
